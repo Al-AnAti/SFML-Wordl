@@ -2,7 +2,7 @@
 
 A Wordle clone written in C++20 using [SFML 2.6](https://www.sfml-dev.org/).
 
-Guess the hidden five-letter word in six tries. After each guess the squares turn green (right letter, right place), yellow (right letter, wrong place) or gray (not in the word). Only words from the built-in list are accepted.
+Guess the hidden five-letter word in six tries. After each guess the squares turn green (right letter, right place), yellow (right letter, wrong place) or gray (not in the word). The target is drawn from the original Wordle answer list, and a guess is accepted if it's in that list or the larger allowed-guesses list.
 
 ## Controls
 
@@ -19,7 +19,7 @@ Guess the hidden five-letter word in six tries. After each guess the squares tur
 ```
 SFML-Wordl/
 ├── assets/
-│   ├── data/         # wordList.txt, the accepted five-letter words
+│   ├── data/         # answers.txt (possible targets), allowed.txt (extra valid guesses)
 │   └── fonts/        # Font used for the letters and end-of-game text
 ├── src/              # Game source code
 │   ├── main.cpp

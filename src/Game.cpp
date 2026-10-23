@@ -127,7 +127,7 @@ void Game::Input(const sf::Event& event)
 	{
 		if (event.key.code == sf::Keyboard::Enter)
 		{
-			if (chNo == COLS && words.set.count(input) && !guesses.count(input))
+			if (chNo == COLS && words.IsAllowed(input) && !guesses.count(input))
 			{
 				guesses.insert(input);
 
