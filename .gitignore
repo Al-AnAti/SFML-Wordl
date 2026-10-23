@@ -1,0 +1,30 @@
+# CMake build directories
+build/
+out/
+cmake-build-*/
+dist/
+CMakeUserPresets.json
+
+# IDE files
+.vs/
+.vscode/
+.idea/
+CppProperties.json
+*.user
+*.aps
+
+# Leftover Visual Studio build output
+x64/
+x86/
+Debug/
+Release/
+
+# Compiled files
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.iobj
+*.ipdb

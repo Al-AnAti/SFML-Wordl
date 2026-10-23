@@ -1,20 +1,19 @@
 #include <string>
 
+#include <SFML/Graphics.hpp>
+
 #include "Square.h"
-#include "SFML\Graphics.hpp"
 
 const float Square::WIDTH  = 70.f;
 const float Square::HEIGHT = 70.f;
 
-Square::Square(const sf::Vector2f& pos)
+Square::Square(const sf::Vector2f& pos, const sf::Font& font)
 {
 	shape.setPosition(pos);
 	shape.setSize({ WIDTH, HEIGHT });
 	shape.setFillColor(sf::Color::White);
 	shape.setOutlineThickness(5);
 	shape.setOutlineColor(sf::Color::Black);
-
-	font.loadFromFile("arial.ttf");
 
 	ch.setFont(font);
 	ch.setString(" ");
@@ -36,7 +35,7 @@ sf::Vector2f Square::findChPos()
 
 void Square::setCh(char c)
 {
-	ch.setString(c);
+	ch.setString(std::string(1, c));
 	ch.setPosition(findChPos());
 }
 
